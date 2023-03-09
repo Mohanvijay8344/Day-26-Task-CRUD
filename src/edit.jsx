@@ -22,24 +22,14 @@ export function Edit() {
         const [url, setUrl] = useState("");
         const [wikiUrl, setWikiUrl] = useState(""); 
         const [id, setId] = useState("");
+
     
-const updateUser = async() => {
+    const updateUser = async() => {
     await fetch(`https://63d75fbcafbba6b7c93beb74.mockapi.io/Peoples/${id}`, {
         method: "PUT",
-        body: JSON.stringify(),
-        headers: {
-          "Content-Type": "application/json",
-        },
         });
-        navigate("/")
-}
-
-        useEffect(() => {
-            setId(localStorage.getItem('id'))
-          setName(localStorage.getItem('name'));
-          setImage(localStorage.getItem('image'));
-        }, []);
-      
+    }; 
+    navigate("/")   
     return(
             <div>
                 <div className="add">
